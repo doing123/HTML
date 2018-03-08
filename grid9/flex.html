@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>九宫格：flex</title>
+    <link type="text/css" rel="stylesheet" href="./reset.css">
+</head>
+<body>
+    <ul class="grid">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+    <style>
+        .grid{
+            margin: 50px auto;
+            display: flex; /* Flexible Box 的缩写，意为"弹性布局*/
+            flex-wrap: wrap; /*换行*/
+            width: 300px;
+        }
+        .grid li{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border: 4px solid #ddd;
+            box-sizing: border-box; /*盒模型：border-box,宽度包括边框*/
+            margin-left: -4px; /*左、上外负边距*/
+            margin-top: -4px;
+        }
+        .grid li:hover {
+            color: red;
+            border-color: red;
+            z-index: 100;
+        }
+        .grid li:nth-child(3n+1){
+            margin-left: 0;
+        }
+    </style>
+</body>
+</html>
