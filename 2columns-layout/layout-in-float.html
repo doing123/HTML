@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Chomo" />
+    <link rel="start" href="http://www.14px.com" title="Home" />
+    <title>两栏布局：上高度固定，下自适应</title>
+    <link type="text/css" rel="stylesheet" href="../css/reset.css">
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<section>
+    <style>
+        .header{
+            height: 100px;
+            width: 100%;
+            background-color: blue;
+        }
+        .main{
+            position: absolute;
+            top: 100px;
+            bottom: 0;
+            width: 100%;
+        }
+        .aside{
+            float: left;
+            height: 100%;
+            width: 200px;
+            background-color: #FFCC00;
+        }
+        .content{
+            margin-left: 200px;
+            height: 100%;
+            background-color: blueviolet;
+        }
+    </style>
+    <div class="header">头部</div>
+    <div class="main">
+        <div class="aside">侧边导航栏</div>
+        <div class="content">内容区</div>
+    </div>
+</section>
+</body>
+</html>

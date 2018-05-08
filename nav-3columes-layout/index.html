@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>布局</title>
+    <link type="text/css" rel="stylesheet" href="../css/reset.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<style>
+    .container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 50px auto 50px;
+        grid-gap: 5px;
+        grid-template-areas:
+                "h h h h h h h h h h h h"
+                "m m c c c c c c c c c c"
+                "f f f f f f f f f f f f";
+    }
+    @media screen and (max-width: 640px) {
+        .container {
+            grid-template-areas:
+                    "m m m m m m h h h h h h"
+                    "c c c c c c c c c c c c"
+                    "f f f f f f f f f f f f";
+        }
+    }
+    .header {
+        grid-area: h;
+    }
+    .menu {
+        grid-area: m;
+        background-color: #FFCC00;
+    }
+    .content {
+        grid-area: c;
+        background-color: blueviolet;
+    }
+    .footer {
+        grid-area: f;
+    }
+</style>
+<div class="container">
+    <div class="header">HEADER</div>
+    <div class="menu">MENU</div>
+    <div class="content">CONTENT</div>
+    <div class="footer">FOOTER</div>
+</div>
+</body>
+</html>
